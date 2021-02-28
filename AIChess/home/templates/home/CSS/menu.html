@@ -1,0 +1,198 @@
+<style>
+  body{
+      /* background-color: #183d5d !important; */
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
+
+  .boardType{
+      text-align: center;
+      font-size: 20px;
+      width: 350;
+      font-weight: 900;
+      color:rgb(255, 136, 0);
+      margin-bottom: 10px;
+  }
+
+  .card {
+      text-align: center;
+
+      background-color: rgba(243, 243, 243, 0.698);
+
+      width: 350px;
+      height: 510px; 
+      box-shadow: 0 2px 15px 0 rgba(255, 255, 255, 0.972);
+      transition: 0.3s;
+      border-radius: 5px; /* 5px rounded corners */
+    }
+    
+    /* Add rounded corners to the top left and the top right corner of the image */
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+
+    .startButton{
+        width: 250px;
+        height: 50px;
+        font-size: large;
+        font-weight: bold;
+        background-color: rgb(50, 173, 50); 
+        margin: 20px auto;
+        display: auto;
+        border-radius: 5px;
+
+      /* click effect */
+      cursor: pointer; 
+      outline: none; 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+    }
+
+    .stop{
+        background-color: rgba(224, 10, 10, 0.959);
+    }
+
+    .modifyButton{
+      width: 130px;
+      height: 50px;
+      font-size: large;
+      font-weight: bold;
+      background-color: rgb(21, 157, 236); 
+      margin: 10px auto;
+      display: auto;
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      /* click effect */
+      cursor: pointer; 
+      outline: none; 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+    }
+
+    .startButton:active{ 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+      transform: translateY(4px); 
+      /* Moving button 4px to y-axis */ 
+    }
+
+    .modifyButton:active{ 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+      transform: translateY(4px); 
+      /* Moving button 4px to y-axis */ 
+    }
+
+    .customButtonActive{
+      background-color: rgb(50, 173, 50);
+    }
+
+    .choiceContiner{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+    .choice{
+        display: block;
+        width: 180px;
+        height: 30px;
+
+        font-size: large;
+        font-weight: bold;
+        margin: 10px auto;
+        display: auto;    
+    }
+
+    .value{
+      font-size: large;
+      font-weight: bold;  
+    }
+
+    .against.custom{
+      font-size: medium;
+      font-weight: bold;
+    }
+
+    label{
+      font-size: 20px;
+      font-weight: 300;  
+    }
+
+    .turn{
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .movesContainer{
+      display: block;
+      width: 150px; 
+      box-shadow: 0 2px 15px 0 rgba(255, 255, 255, 0.972);
+    }
+
+    .moveHeading{
+        display: block;
+        width: 150px;
+        text-align: center;
+        background-color: rgb(240, 230, 140, 0.798);
+    }
+
+    .moves{
+        display: block;
+        width: 150px;
+        height: 400px;
+        padding: 20px;
+        background-color: rgb(240, 230, 140, 0.798);
+
+        white-space: pre-wrap;
+    }
+
+    .repoButton{
+      width: 130px;
+      height: 40px;
+      font-size: large;
+      font-weight: bold;
+      background-color: rgb(148, 164, 173); 
+      float: left;
+      display: auto;
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-left: 5px;
+
+      /* click effect */
+      cursor: pointer; 
+      outline: none; 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+    }
+
+
+    .repoButton:active{ 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+      transform: translateY(4px); 
+      /* Moving button 4px to y-axis */ 
+    }
+
+    .gitHub{
+      margin: 20px auto;
+      display: auto;
+    }
+
+    .gitHub img{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-bottom: 7px;
+      /* margin-right: 100px; */
+    }
+
+    /* Transitions for selece menue ------------------------------------- */
+
+  </style>

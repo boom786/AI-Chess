@@ -1,0 +1,263 @@
+{% load static %}
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container{
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        padding: 20px;
+
+        background: url('{% static "home/Images/stars.jpeg" %}') center center no-repeat;
+        background-size: cover;
+    }
+    .container#blur.active{
+        filter: blur(20px);
+        pointer-events: none;
+        user-select: none;
+    }
+
+    #popup{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0 , 0 , 0 , .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        text-align: center;
+    }
+
+    #popup.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    /* PIECES */
+    .promotion{
+        float: left;
+        width: 75px;
+        height: 75px;
+        font-size: 50px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 75px;
+    }
+
+    /* POp-UP */
+
+    /* black */
+    #b_promotion{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0 , 0 , 0 , .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        text-align: center;
+    }
+
+    #b_promotion.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    /* white */
+    #w_promotion{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0 , 0 , 0 , .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        text-align: center;
+    }
+
+    #w_promotion.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    /* check-mate */
+    #checkMate{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0 , 0 , 0 , .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        text-align: center;
+    }
+
+    #checkMate.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    /* Draw */
+    #draw{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0 , 0 , 0 , .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        text-align: center;
+    }
+
+    #draw.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    /* stalemate */
+    #stalemate{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0 , 0 , 0 , .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        text-align: center;
+    }
+
+    #stalemate.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    /* Custom Board */
+    #customBoardPopUp{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0 , 0 , 0 , .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        text-align: center;
+    }
+
+    #customBoardPopUp.active{
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+
+    .chooseFrom{
+        margin: 0 auto;
+        width: 100%;
+        float: left;
+    }
+
+    .cancle{
+        margin:auto;
+        display:block;
+
+        width: 130px;
+        height: 50px;
+        font-size: large;
+        font-weight: bold;
+        background-color: rgb(50, 173, 50); 
+        margin: 20px auto;
+        display: auto;
+        border-radius: 5px;
+
+      /* click effect */
+      cursor: pointer; 
+      outline: none; 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+    }
+
+    .ok{
+        margin:auto;
+        display:block;
+
+        width: 130px;
+        height: 50px;
+        font-size: large;
+        font-weight: bold;
+        background-color: rgb(50, 173, 50); 
+        margin: 20px auto;
+        display: auto;
+        border-radius: 5px;
+
+      /* click effect */
+      cursor: pointer; 
+      outline: none; 
+      box-shadow: 2px 0px 5px 1px;
+      box-shadow:  rgba(126, 125, 125, 0.24); 
+    }
+
+    .cancle:active{ 
+        box-shadow: 2px 0px 5px 1px;
+        box-shadow:  rgba(126, 125, 125, 0.24); 
+        transform: translateY(4px); 
+        /* Moving button 4px to y-axis */ 
+    }
+</style>
