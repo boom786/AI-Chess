@@ -1,10 +1,8 @@
+{% extends './base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Chessboard</title>
+
+{% block stylesheet %}
 
     {% include './CSS/board.html' %}
     {% include './CSS/moves.html' %}
@@ -14,8 +12,9 @@
     <!-- Linkedin profile card -->
     {% include './CSS/LiBadge.html' %}
 
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
 <div class = 'container' id = 'blur'>
 
     <!-- MENU -->
@@ -241,5 +240,4 @@
 {% include './JS/script.html' %}
 <!-- <script src = "./JS/script.js"></script> -->
 
-</body>
-</html>
+{% endblock %}

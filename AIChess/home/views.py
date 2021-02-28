@@ -6,3 +6,6 @@ from requests.api import request
 def home(request):
 	# return HttpResponse("Hello world")
 	return render(request, 'home/index.html')
+
+def base(request):
+	return render(request, 'home/base.html')
